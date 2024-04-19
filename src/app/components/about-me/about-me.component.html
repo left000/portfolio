@@ -1,0 +1,52 @@
+<section id="aboutMe" class="aboutMe">
+    <div class="content-seccion">
+        <h2>About Me</h2>
+        <p>
+            <span>Ciao {{persona.nome}} {{persona.cognome}}</span>
+            {{persona.descrizione}}
+        </p>
+        <div class="fila">
+            <div class="col">
+                <h3>Dati Personali</h3>
+                <ul>
+                    <li>
+                        <strong>Età</strong> {{persona.eta}}
+                    </li>
+                    <li>
+                        <strong>Telefono</strong> {{persona.telf}}
+                    </li>
+                    <li>
+                        <strong>Email</strong>
+                        {{persona.email}}
+                    </li>
+                    <li>
+                        <strong>GitHub</strong>
+                        {{persona.gitHub}}
+                    </li>
+                    <li>
+                        <strong>Direzione</strong>
+                        {{persona.direzione}}
+                    </li>
+                    <li>
+                        <strong>linkedln</strong>
+                        {{persona.linkedln}}
+                    </li>
+                </ul>
+            </div>
+
+            <div class="col">
+                <h3>Hobbies</h3>
+                <div class="contenedor-intereses">
+                    <div *ngFor="let hobbies of persona.hobbies" class="interes">
+                        <i class="{{hobbies.icona}}"></i>
+                        {{hobbies.descrizione}} 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button>
+            Descargar CV <i class="fa-solid fa-download"></i>
+            <span class="overlay"></span>
+        </button>
+    </div>
+</section>

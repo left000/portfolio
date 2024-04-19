@@ -1,0 +1,12 @@
+<section id="inicio" class="inicio">
+    <div class="contenido-banner">
+        <div class="contenedor-img">
+            <img [src]="image" alt="foto-profilo">
+        </div>
+        <h1>{{persona.nome}} {{persona.cognome}}</h1>
+        <h2>Junior Web Developer</h2>
+        <div *ngFor="let socials of persona.socials" class="redes" >
+            <a target="_blank" href="{{socials.link}}"><i class="{{socials.icona}}"></i></a>
+        </div>
+    </div>
+</section>
