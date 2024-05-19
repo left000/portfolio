@@ -6,6 +6,10 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
+import { FormazioneComponent } from './components/formazione/formazione.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { FooterComponent } from './footer/footer.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -13,11 +17,15 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
     NavBarComponent,
     ProfileComponent,
     AboutMeComponent,
-    SkillsComponent
+    SkillsComponent,
+    FormazioneComponent,
+    PortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

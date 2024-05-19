@@ -1,21 +1,66 @@
 export interface Persona {
-    nome?: string,
-    cognome?: string,
+    anagrafica?: Anagrafica,
     descrizione?: string,
-    telf?: number | string,
-    email?: string,
-    gitHub?: string,
+    contatti?: Contatti,
     mestiere?: string,
-    direzione?: string,
-    nazionalita?: string,
-    linkedln?: string,
-    lingue?: string,
-    eta?: string,
+    lingue?: Lingue[],
     hobbies?: Hobbies[],
     socials?: Socials[],
     skills?: Skills[],
+    istruzione?: Istruzione[],
+    esperienzeLavorative?: EsperienzeLavorative[];
+    progetti?: Progetti[]
 }
 
+export interface Progetti {
+    nome?: string,
+    url?: string,  
+    descrizione?: string,
+}
+
+export interface EsperienzeLavorative {
+    azienda?: string,
+    data?: string,
+    descrizione?: string[]
+}
+
+
+export interface Istruzione {
+    formazione?: string,
+    data?: string,
+    titolo?: string,
+    descrizione?: string,
+}
+
+
+export interface Contatti {
+    email?: string | [],
+    telfFisso?: number | string | [],
+    telf?: number | string | [],
+}
+export interface Anagrafica {
+    nome?: string,
+    cognome?: string,
+    indirizzo?: string,
+    dataDiNascita?: string,
+    nazionalita?: Nazionalita[],
+
+}
+export interface Lingue {
+    flag?: string;
+    lingua?: string,
+    level?: Nivello,
+}
+
+export enum Nivello {
+    BASE = 'base',
+    AVANZATO = 'Avanzato',
+    MADRELINGUA = 'Madrelingua',
+}
+
+export interface Nazionalita {
+    nazionalita?: string;
+}
 export interface Hobbies {
     icona?: string,
     descrizione?: string,
@@ -33,11 +78,11 @@ export interface Skills {
     softSkills?: SoftSkills[],
 }
 
-export interface SoftSkills{
+export interface SoftSkills {
     competenze?: string,
 }
 
-export interface HardSkills{
+export interface HardSkills {
     linguaggi?: string;
     icona?: string;
 }

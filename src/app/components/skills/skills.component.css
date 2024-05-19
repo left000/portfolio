@@ -5,7 +5,7 @@
     padding: 50px 20px;
 }
 .skills .contenido-seccion{
-    max-width: 1100px;
+    max-width: 1318px;
     margin: auto;
 }
 .skills h2{
@@ -31,9 +31,6 @@
     
 }
 
-.skills .contenido-seccion .fila .col .container-soft-skills .skill{
-    align-items: center;    
-}
 
 .skills .contenido-seccion .fila .col .container-hard-skills .skill{
     width: 100px;
@@ -41,12 +38,14 @@
     background-color: #1e2326;
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
+    flex-direction: column;  
     align-items: center;
     justify-content: center;
     transition: .3s;
     width: calc(33.33% - 15px); 
     margin-bottom: 15px;
+    align-items: center;    
+
 }   
 
 .skills .contenido-seccion .fila .col .container-hard-skills .skill:hover{
@@ -66,8 +65,35 @@
 .skills .skill > span{
     font-weight: bold;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: -8px;
 }
+
+.skills .container-soft-skills {
+    display: flex;
+    flex-direction: column; 
+}
+
+.skills .container-soft-skills .skill {
+    width: 100%; 
+    background-color: #1CB698; 
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-bottom: 15px;
+    text-align: center;
+    transition: .3s;
+}
+
+.skills .container-soft-skills .skill:hover {
+    background-color: #1e2326; /* Cambiato colore di sfondo al passaggio del mouse */
+}
+
+
+@media (max-width: 768px) {
+    .skills .container-soft-skills .skill {
+        width: 100%; 
+    }
+}
+
 
 .skill .contenido-seccion .skill  {
     color: #fff;
@@ -86,3 +112,28 @@
 .skill .contenido-seccion .skill  {
     background-color: #1CB698;
 }
+@media (max-width: 768px) {
+    .skills .fila {
+        flex-direction: column;
+    }
+    .skills .fila .col {
+        width: 100%;
+        padding: 0;
+    }
+    .skills .contenido-seccion .fila .col .container-hard-skills {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+    .skills .contenido-seccion .fila .col .container-soft-skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .skills .contenido-seccion .fila .col .container-hard-skills .skill,
+    .skills .contenido-seccion .fila .col .container-soft-skills .skill {
+        width: 100%;
+    }
+}
+
+

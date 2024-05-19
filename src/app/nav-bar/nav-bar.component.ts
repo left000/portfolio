@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Persona } from '../model/persona';
+import { Anagrafica, Persona } from '../model/persona';
 
 @Component({
   selector: 'app-nav-bar',

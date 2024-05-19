@@ -2,7 +2,7 @@
     <div class="content-seccion">
         <h2>About Me</h2>
         <p>
-            <span>Ciao {{persona.nome}} {{persona.cognome}}</span>
+            <span> Sono {{persona.anagrafica?.nome}} {{persona.anagrafica?.cognome}}</span>
             {{persona.descrizione}}
         </p>
         <div class="fila">
@@ -10,26 +10,28 @@
                 <h3>Dati Personali</h3>
                 <ul>
                     <li>
-                        <strong>Età</strong> {{persona.eta}}
+                        <strong>Data di Nascita</strong> {{persona.anagrafica?.dataDiNascita}}
                     </li>
                     <li>
-                        <strong>Telefono</strong> {{persona.telf}}
+                        <strong>Telefono</strong> {{persona.contatti?.telf}}
                     </li>
                     <li>
                         <strong>Email</strong>
-                        {{persona.email}}
+                        {{persona.contatti?.email}}
                     </li>
                     <li>
-                        <strong>GitHub</strong>
-                        {{persona.gitHub}}
+                        <strong>Indirizzo</strong>
+                        {{persona.anagrafica?.indirizzo}}
                     </li>
-                    <li>
-                        <strong>Direzione</strong>
-                        {{persona.direzione}}
-                    </li>
-                    <li>
-                        <strong>linkedln</strong>
-                        {{persona.linkedln}}
+                    <li class="lingue">
+                        <strong>Lingue</strong>
+                        <div>
+                            <div class="lingue-div" *ngFor="let lingue of persona.lingue">
+                                {{lingue.lingua}}
+                                {{lingue.level}}
+                                {{lingue.flag}}
+                            </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -39,13 +41,13 @@
                 <div class="contenedor-intereses">
                     <div *ngFor="let hobbies of persona.hobbies" class="interes">
                         <i class="{{hobbies.icona}}"></i>
-                        {{hobbies.descrizione}} 
+                        {{hobbies.descrizione}}
                     </div>
                 </div>
             </div>
         </div>
-        <button>
-            Descargar CV <i class="fa-solid fa-download"></i>
+        <button (click)="downloadPdf()">
+            Scarica CV <i class="fa-solid fa-download"></i>
             <span class="overlay"></span>
         </button>
     </div>

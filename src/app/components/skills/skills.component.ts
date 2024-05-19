@@ -7,6 +7,7 @@ import { Persona } from '../../model/persona';
   styleUrls: ['./skills.component.css']
 })
 export class SkillsComponent implements OnInit {
+  
   @Input() persona!: Persona; 
 
   constructor() { }

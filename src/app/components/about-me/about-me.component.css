@@ -62,12 +62,15 @@
     height: 100px;
     background-color: #252A2E;
     border-radius: 10px;
-    margin: 0 15px 15px 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: .3s;
+    margin-bottom: 15px;
+    align-items: center; 
+    text-align: center;
+    margin: 10px;
 }
 .aboutMe .fila .col .contenedor-intereses .interes:hover{
     background-color: #1CB698;
@@ -102,3 +105,34 @@
 .aboutMe button:hover .overlay{
     width: 100%;
 }
+
+.lingue{
+    display: flex;
+}
+
+.lingue-div{
+    background-color: #1CB698;
+    margin-bottom: 10px;
+    padding: 4px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .aboutMe .fila {
+        flex-direction: column;
+    }
+    .aboutMe .fila .col {
+        width: 100%;
+    }
+    .aboutMe .fila .col h3 {
+        text-align: center;
+    }
+
+    .aboutMe .fila .col .contenedor-intereses {
+        justify-content: center;
+    }
+
+}
+
+
