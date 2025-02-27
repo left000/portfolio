@@ -71,7 +71,7 @@ export class AppComponent {
           { linguaggi: 'Java', icona: 'fa-brands fa-java' },
           { linguaggi: 'Spring Boot', icona: '' },
           { linguaggi: 'Angular', icona: 'fa-brands fa-angular' },
-          { linguaggi: 'Jasmine', icona: 'f' },
+          { linguaggi: 'Docker', icona: 'fa-brands fa-docker' },
           { linguaggi: 'HTML', icona: 'fa-brands fa-html5' },
           { linguaggi: 'CSS', icona: 'fa-brands fa-css3-alt' },
           { linguaggi: 'Git', icona: 'fa-brands fa-git-alt' },
